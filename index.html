@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+  <!-- css -->
+  <link rel="stylesheet" href="index.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,500&display=swap" rel="stylesheet">
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike website</title>
+
+  <script>
+    tailwind.config = {
+      theme:{
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+        },
+        extend: {
+          fontFamily: {
+            sans: ['Roboto', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body>
+  <section id="header">
+    <div class="px-12 py-8 flex top-0 left-0 right-0 space-x-4 justify-between bg-gray-100 shadow-lg text-black 
+    cursor-pointer fixed w-screen z-20 opacity-100">
+      <div class="Logo">
+        <h1 class="font-bold text-2xl">
+          Swadeshi Wheels</h1>
+      </div>
+
+     <div class="icons flex space-x-6">
+
+      <a href="#search">
+        <div class="relative group">
+          <img class="h-10 w-10" src="images/header-icon/search.png" alt="">
+          <p class="absolute opacity-0 group-hover:opacity-50 bottom-50px whitespace-nowrap bg-gray-200 px-2">
+            Search Here</p>
+        </div>
+      </a>
+
+        <div class="relative group">
+          <img class="h-10 w-10" src="images/header-icon/cart.png" alt="">
+          <p class="absolute opacity-0 group-hover:opacity-50 ml-4 bottom-50px bg-gray-200 px-2">
+            Cart</p>
+        </div>
+
+
+        <a href="#FAQ">
+          <div class="relative group">
+            <P class="text-lg mt-2">FAQ's</P>
+          </div>
+        </a>
+
+
+
+
+        <a href="#login">
+        <div class="relative group">
+          <img class="h-10 w-10" src="images/header-icon/account.png" alt="">
+          <p class="opacity-0 group-hover:opacity-50 absolute bottom-50px bg-gray-200 px-2">
+            Account</p>
+        </div>
+      </a>
+     </div> 
+    </div>
+  </section>
+  <!-- upper part -->
+
+  <section class="upper-part">
+    <div class="background p-4 bg-black text-black text-center">
+      <p class="text text-white my-4 text-3xl max-w-xl font-bold md:text-4xl md:max-w-full">
+        Rent Motorcycles / Buy Gears at affordable prices.</p>
+      <p class="js-btn-buy text-white my-12 text-xl md:text-2xl italic">Save upto 40% on first rental</p>  
+        
+      <div class="btns flex space-x-4 justify-center cursor-pointer md:space-x-16">
+          <p onclick="change()" class="text-2xl text-white bg-purple-500 rounded-full py-2 px-4
+          active:text-purple-500 active:bg-white md:text-4xl md:px-16 md:py-4 hover:bg-green-600 transition">
+            RENT</p>
+
+          <p onclick="secondChange()" class="text-2xl text-white bg-purple-500 rounded-full py-2 px-4
+           active:text-purple-500 active:bg-white md:text-4xl md:px-16 md:py-4 hover:bg-green-600 transition">
+            BUY</p>
+
+        <!-- search-bars -->
+
+        </div>
+        <div class="search-bar my-8 md:mt-16">
+          <div class="flex flex-col items-center space-y-6 ">
+
+            <div class="relative">
+                <input class=" px-10 md:px-24 py-4 rounded-xl outline-none" 
+                type="search" placeholder="Try e.g. Enfield" name="" id="">
+                <img class="w-8 absolute top-3 right-2" src="images/header-icon/search.png" alt="">
+            </div>
+
+            <div class="relative">
+                <input class=" px-10 md:px-24 py-4 rounded-xl outline-none" 
+                type="search" placeholder="type the location" name="" id="">
+                <img class="w-8 absolute top-3 right-2" src="images/header-icon/location.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div id="search" class="search-box text-white text-xl">
+          <button class="bg-purple-500 px-10 py-4 
+          hover:bg-green-600 transition md:px-36 md:py-4">
+            SEARCH
+          </button>
+        </div>
+
+        <!-- card section -->
+        <div class="flex justify-between px-12 py-8 md:mx-28">
+          <!-- card section 1 -->
+          <div class="bg-white p-4 rounded-full border border-purple-300 hover:shadow-md
+           md:p-12 md:space-y-4">
+            <div class="flex justify-center items-center">
+              <img class="h-12 w-12 md:h-16 md:w-16 transition translate md:hover:scale-110" 
+              src="images/card-image/trust.png" alt="trust">
+            </div>
+            <div class="md:text-xl">
+              <p>Trusted by</p>
+              <p class="font-bold">25,000+</p>
+              <p>Bikers</p>
+            </div>
+          </div>
+          
+          <!-- card section 2 -->
+          <div class="bg-white p-4 rounded-full border border-purple-300 hover:shadow-md 
+           md:p-12 md:space-y-4">
+            <div class="flex justify-center items-center">
+              <img class="h-12 w-12 md:h-16 md:w-16 transition translate md:hover:scale-110" 
+              src="images/card-image/feedback.png" alt="feedback">
+            </div>
+            <div class="md:text-xl">
+              <p>feedback</p>
+              <p class="font-bold">4.95/5</p>
+              <p>2k reviews</p>
+            </div>
+          </div>
+          
+          <!-- card section 3 -->
+          <div class="bg-white p-4 rounded-full border border-purple-300 hover:shadow-md 
+          md:p-12 md:space-y-4">
+            <div class="flex justify-center items-center">
+              <img class="h-12 w-12 md:h-16 md:w-16 transition translate md:hover:scale-110" 
+              src="images/card-image/rent.png" alt="trust">
+            </div>
+            <div class="md:text-xl">
+              <p>Rent from</p>
+              <p class="font-bold">200+</p>
+              <p>listings</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="text-white bg-black p-4 rounded-xl hover:opacity-80">
+          <p class="text-3xl font-bold p-6">Popular bikes for rental</p>
+          <p class="text-lg italic">Choose according to your journey..</p>
+        </div>
+       
+    </div>
+  </section>
+
+  <!-- middle content -->
+  <section class="bg-black text-white mb-6 text-center">
+    
+
+    <div class="main-div grid grid-cols-1 md:grid-cols-4 px-0  gap-2">
+    <!-- category 1 -->
+      <div class="adv group overflow-hidden relative">
+        <a href="#">
+          <img class="h-64 md:h-80 w-screen relative opacity-50 group-hover:scale-110 duration-200" 
+          src="images/bike-categories/adv/cover-image.jpg" alt="adventure">
+          <h5 class="uppercase text-2xl  absolute bottom-20 left-20 text-white font-bold
+          group-hover:scale-110 duration-200 ">
+              Adventure series
+          </h5>
+        </a>
+      </div>
+      <!-- category 2 -->
+      <div class="street group overflow-hidden relative">
+        <a href="#">
+          <img class="h-64 md:h-80 w-screen relative opacity-50 group-hover:scale-110 duration-200" 
+          src="images/bike-categories/street/street-bike.jpg" alt="adventure">
+          <h5 class="uppercase text-2xl  absolute bottom-20 left-20 text-white font-bold
+          group-hover:scale-110 duration-200 ">
+             Street series
+          </h5>
+        </a>
+      </div>
+      <div class="adv group overflow-hidden relative">
+        <a href="#">
+          <img class="h-64 md:h-80 w-screen relative opacity-50 group-hover:scale-110 duration-200" 
+          src="images/bike-categories/sports/ninja.jpg" alt="adventure">
+          <h5 class="uppercase text-2xl  absolute bottom-20 left-20 text-white font-bold
+          group-hover:scale-110 duration-200 ">
+              Sports series
+          </h5>
+        </a>
+      </div>
+      <div class="adv group overflow-hidden relative">
+        <a href="#">
+          <img class="h-64 md:h-80 w-screen relative opacity-50 group-hover:scale-110 duration-200" 
+          src="images/bike-categories/gearless/activa.jpg" alt="adventure">
+          <h5 class="uppercase text-2xl  absolute bottom-20 left-20 text-white font-bold
+          group-hover:scale-110 duration-200 ">
+             Gearless
+          </h5>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- customer reviews -->
+  <div class="bg-gray-100">
+    <div class="flex items-center justify-center">
+      <img src="images/community.png" alt="">
+    </div>
+    <div>
+      <p class="text-center text-lg">CUSTOMER EXPERIENCES</p>
+    </div>
+    <div class="space-y-2 grid grid-cols-1 md:grid-cols-3">
+    <!-- review 1 -->
+    <div class="p-4 mx-2 bg-white space-y-2">
+        <h3 class="text-center text-md">Unforgettable Adventure Thanks to Swadeshi wheels</h3>
+        <p class="text-sm  text-justify leading-6 italic">"My recent motorcycle rental experience with swadeshi wheels was nothing short of amazing.
+           The team's expertise helped me choose the perfect bike for my ride, and their recommendations 
+           for routes added to the adventure. The motorcycle performed flawlessly, allowing me to explore
+            breathtaking landscapes hassle-free. I had a fantastic 
+          time and will definitely rent from them again. Highly recommended for motorcycle enthusiasts!"</p>
+          <div class="flex items-center justify-center">
+            <img class="rounded-full h-28 w-20" src="images/reviews/person1.jpg" alt="">
+          </div>
+          <div class="text-center">
+            <p>Albert Baruah</p>
+            <p>Trip Advisor</p>
+          </div>
+    </div>
+    <!-- Review 2 -->
+    <div class="p-4 mx-2 bg-white space-y-2">
+      <h3 class="text-center text-md">Fantastic Rental Experience!</h3>
+      <p class="text-sm  text-justify leading-6 italic">"I had an incredible experience renting a 
+        motorcycle from swadeshi wheels. The booking process was straightforward, and the staff was
+         friendly and accommodating upon my arrival. The motorcycle was in excellent condition and 
+         provided a smooth and enjoyable ride. I appreciated their helpful tips on scenic routes, 
+        enhancing my overall trip. I highly recommend their services to fellow riders!"</p>
+        <div class="flex items-center justify-center">
+          <img class="rounded-full h-28 w-20" src="images/reviews/person2.jpg" alt="">
+        </div>
+        <div class="text-center">
+          <p>Sourav Baruah</p>
+          <p>Bike & Car Enthusiasts</p>
+        </div>
+  </div>
+
+  <!-- review 3 -->
+  <div class="p-4 mx-2 bg-white space-y-2">
+    <h3 class="text-center text-md">Top-Notch Bikes and Professional Service</h3>
+    <p class="text-sm  text-justify leading-6 italic">"I rented a bike from SWADESHI WHEELS,
+       and it was an absolute pleasure. The bikes available were of high quality and diverse,
+        meeting various riding preferences. The team's expertise and recommendations for local
+         trails elevated the experience. Their professionalism and attention to detail were evident.
+       I had a blast exploring, and I'll definitely return for my next ride!"</p>
+      <div class="flex items-center justify-center">
+        <img class="rounded-full h-28 w-20" src="images/reviews/person3.jpg" alt="">
+      </div>
+      <div class="text-center">
+        <p>Dr. Issac Baruah</p>
+        <p>Mahindra CEO</p>
+      </div>
+</div>
+
+</div>
+<div class="bg-white">
+  <!-- Read More button -->
+  <a class="text-center md:flex md:justify-center md:items-center" 
+  href="http://127.0.0.1:5500/feedbacks/feedback.html" target="_blank">
+    <p class="shadow mx-36 md:mx-0  py-2 px-6 hover:bg-green-600
+     hover:text-white transition">Read More</p>
+  </a>
+</div>
+  </div>
+
+  <!-- motorcycle tours -->
+  <section class="bg-gray-100 mt-4">
+    <div class="flex items-center justify-center">
+      <img src="images/MOTORCYLE-ICON.png" alt="">
+    </div>
+    <div>
+      <p class="text-center text-lg">MOTORCYCLE TOUR</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3">
+<!-- coroussel -->
+<!-- section 1 -->
+
+<div class="bg-white p-4 ">
+  <div class="flex justify-center items-center">
+    <img class="max-w-md hover:saturate-150"   
+    src="images/carousel/meghalaya.avif" alt="">
+  </div>   
+  <div>
+    <p class="text-center text-lg">Meghalaya Bike Trip</p>
+  </div>
+  <div class="flex justify-between mx-16">
+    <div>
+      <p>Trip date:</p>
+      <p>Trip Days:</p>
+      <p>Riding:</p>
+    </div>
+    <div>
+      <p>12.12.2023</p>
+      <p>5 Days</p>
+      <p>500 kms.</p>
+    </div>
+  </div>
+  <a href="http://127.0.0.1:5500/tour.html" target="_blank">
+  <div class="text-center shadow max-w-lg mx-16 py-3 hover:bg-green-600 hover:text-white">
+    View Details
+  </div>
+</a>
+
+</div>
+
+<!-- section 2 -->
+<!-- coroussel -->
+<div class="bg-white p-4 ">
+<div class="flex justify-center items-center">
+<img class="max-w-md hover:saturate-150" 
+src="images/carousel/leh.webp" alt="">
+</div>   
+<div>
+<p class="text-center text-lg">Assam to Leh</p>
+</div>
+<div class="flex justify-between mx-16">
+<div>
+  <p>Trip date:</p>
+  <p>Trip Days:</p>
+  <p>Riding:</p>
+</div>
+<div>
+  <p>19.02.2024</p>
+  <p>20 Days</p>
+  <p>2500 kms.</p>
+</div>
+</div>
+
+<a href="http://127.0.0.1:5500/tour.html" target="_blank">
+<div class="text-center shadow max-w-lg mx-16 py-3 hover:bg-green-600 hover:text-white">
+View Details
+</div>
+</a>
+
+</div>
+
+<!-- section 3 -->
+<!-- coroussel -->
+<div class="bg-white p-4 ">
+  <div class="flex justify-center items-center">
+  <img class="max-w-md hover:saturate-150" 
+  src="images/carousel/sikkim101.jpg" alt="">
+  </div>   
+  <div>
+  <p class="text-center text-lg">Assam to Sikkim Trip</p>
+  </div>
+  <div class="flex justify-between mx-16">
+  <div>
+    <p>Trip date:</p>
+    <p>Trip Days:</p>
+    <p>Riding:</p>
+  </div>
+  <div>
+    <p>01.03.2024</p>
+    <p>8 Days</p>
+    <p>0 kms.</p>
+  </div>
+  </div>
+
+  <a href="http://127.0.0.1:5500/tour.html" target="_blank">
+  <div class="text-center shadow max-w-lg mx-16 py-3 hover:bg-green-600 hover:text-white">
+ View Details
+  </div>
+</a>
+
+  </div>
+</section>
+
+<!-- how to use -->
+<section>
+  <div class="bg-white mt-6 space-y-4">
+    <div class="flex items-center justify-center">
+      <img src="images/howto.png" alt="">
+    </div>
+    <div>
+      <p class="text-center text-lg">HOW TO USE</p>
+    </div>
+  </div>
+
+  <!-- 1st one -->
+<div class="md:flex md:px-48">  
+  <div class="bg-white p-8 flex md:flex-col">
+    <div class="md:flex md:items-center">
+      <img class="w-32" src="images/how-to-use/rental.png" alt="">
+      <div>
+        <img class="ml-16 hidden md:block" src="images/right-arrow.png" alt="">
+      </div>
+      <img class="ml-8 md:hidden sm:block" src="images/down-arrow.png" alt="">
+
+    </div>
+    
+    <div class="space-y-4">
+      <p class="text-2xl text-green-600">Select Rental Product</p>
+      <p class="text-sm italic">You can search & select product from our wide range.</p>
+    </div>
+
+  </div>
+<!-- 2nd one -->
+<div class="bg-white p-8 flex md:flex-col space-x-10 md:space-y-4">
+  <div class="space-y-8 md:space-y-0 md:flex md:items-center">
+    <img class="w-28" src="images/how-to-use/cart.png" alt="">
+    <div>
+      <img class="ml-16 hidden md:block" src="images/right-arrow.png" alt="">
+    </div>
+    <img class="ml-8 md:hidden" src="images/down-arrow.png" alt="">
+  </div>
+  
+  <div class="space-y-4 md:max-w-sm">
+    <p class="text-2xl text-green-600">Add to Cart</p>
+    <p class="text-sm italic">Easily add multiple product in your cart or direct
+       book from "Book Now" button.</p>
+  </div>
+</div>
+<!-- 3rd one -->
+<div class="bg-white p-8 flex md:flex-col space-x-10 md:space-y-4">
+  <div class="space-y-8 md:space-y-0 md:flex md:items-center">
+    <img class="w-28" src="images/how-to-use/pick.png" alt="">
+    <div>
+      <img class="ml-16 hidden md:block" src="images/right-arrow.png" alt="">
+    </div>
+    <img class="ml-8 md:hidden" src="images/down-arrow.png" alt="">
+  </div>
+  
+  <div class="space-y-4">
+    <p class="text-2xl text-green-600">Pick Your Product</p>
+    <p class="text-sm italic">Find the pickup location and pick a product.</p>
+  </div>
+</div>
+<!-- 4rth one -->
+<div class="bg-white p-8 flex md:flex-col space-x-10 md:space-y-4">
+  <div class="md:flex md:items-center">
+    <img class="w-24" src="images/how-to-use/ride.png" alt="">
+  </div>
+  
+  <div class="space-y-4">
+    <p class="text-2xl text-green-600">Ride Anywhere</p>
+    <p class="text-sm italic">We do not have kms limit.</p>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- places -->
+<section>
+  <div class="my-8">
+    <p class="text-xl text-center">RENT A BIKE IN TOP CITIES</p>
+  </div>
+
+<div class="grid grid-cols-2 md:grid-cols-5 ml-16 ">
+ 
+  <!-- city 1 -->
+  <div class="space-y-4 w-full overflow-hidden p-4">
+      <img class="w-48 rounded-full transform transition hover:scale-110"
+       src="images/cities/guwahati.jpg" alt="">
+      <p class="text-center mr-20">Guwahati</p>
+  </div>
+  <!-- city 2 -->
+    <div class="space-y-4 w-full overflow-hidden p-4">
+        <img class="w-44 h-32 rounded-full transform transition hover:scale-110" 
+        src="images/cities/BONGAIGAON.jpg" alt="">
+        <p class="text-center mr-20">Bongaigaon</p>
+    </div>
+ 
+    <!-- city 3 -->
+    <div class="space-y-4 w-full overflow-hidden p-4">
+      <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+       src="images/cities/jorhat.avif" alt="">
+      <p class="text-center mr-20">Jorhat</p>
+  </div>
+
+  <!-- city 4 -->
+  <div class="space-y-4 w-full overflow-hidden p-4">
+    <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+     src="images/cities/karimganj.jpg" alt="">
+    <p class="text-center mr-20">Karimganj</p>
+  </div>
+
+    <!-- city 5 -->
+    <div class="space-y-4 w-full overflow-hidden p-4">
+      <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+       src="images/cities/kokrajhar.jpg" alt="">
+      <p class="text-center mr-20">Kokrajhar</p>
+    </div>
+
+    
+      <!-- city 6 -->
+  <div class="space-y-4 w-full overflow-hidden p-4">
+    <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+     src="images/cities/nagaon.jpeg" alt="">
+    <p class="text-center mr-20">Nagaon</p>
+  </div>
+
+    <!-- city 7 -->
+    <div class="space-y-4 w-full overflow-hidden p-4">
+      <img class="w-44 h-32 rounded-full transform transition hover:scale-110" 
+      src="images/cities/silchar.jpg" alt="">
+      <p class="text-center mr-20">Silchar</p>
+    </div>
+
+      <!-- city 8 -->
+  <div class="space-y-4 w-full overflow-hidden p-4">
+    <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+     src="images/cities/tezpur.jpg" alt="">
+    <p class="text-center mr-20">tezpur</p>
+  </div>
+
+    <!-- city 9 -->
+    <div class="space-y-4 w-full overflow-hidden p-4">
+      <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+       src="images/cities/tinisukia.jpg" alt="">
+      <p class="text-center mr-20">Tinisukia</p>
+    </div>
+
+      <!-- city 10 -->
+  <div class="space-y-4 w-full overflow-hidden p-4">
+    <img class="w-44 h-32 rounded-full transform transition hover:scale-110"
+     src="images/cities/bongaigaon.avif" alt="">
+    <p class="text-center mr-20">Bongaigaon</p>
+  </div>
+</div>
+</section>
+
+<!-- about -->
+<section>
+<div class="bg-white p-12 space-y-4">
+  <div class="text-center">
+    <p class="text-3xl">WHO ARE WE?</p>
+    <P class="text-sm">what do you know about us...</P>
+  </div>
+  <div>
+  <div class="text-justify italic bg-gray-50 shadow p-4 md:text-xl md:p-24 md:tracking-widest">
+    <p>
+      As the proud owner of Swadeshi Wheels, a premier motorcycle rental company, our ethos 
+      revolves around delivering an unparalleled experience to our customers. AtSwadeshi Wheels,
+       we understand the fervor and passion for exploring the scenic landscapes of Assam 
+       and beyond on two wheels. We cater to adventurers, travel enthusiasts, and
+        explorers seeking more than just a mode of transportation. Our commitment lies in offering
+         top-notch, well-maintained motorcycles suitable for various terrains, ensuring both safety and        thrill for our riders. What sets us apart is our dedication to customer satisfaction;
+       we prioritize convenience, transparency, and reliability in every aspect of our services.
+       Our online platform provides a seamless and hassle-free booking experience, with flexible 
+       rental durations and competitive pricing. Whether it's a leisurely ride through the lush tea 
+       estates or an adventurous journey across diverse landscapes, choosing Swadeshi Wheels for 
+       motorcycle rentals guarantees not
+       just a bike but an unforgettable journey filled with freedom, excitement, 
+       and unforgettable memories.
+    </p>
+  </div>
+  <div class="bg-white">
+    <!-- Read More button -->
+    <a class="text-center md:flex md:justify-center md:items-center" href="">
+      <p class="shadow mx-36 md:mx-0  py-2 px-6 hover:bg-green-600 hover:text-white transition">Contact Us</p>
+    </a>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- Feedback section -->
+<section>
+  <div class="my-6 space-y-2">
+
+<div class="grid grid-cols-2 md:grid-cols-4">
+
+<div class="p-8 mx-4 text-center space-y-6 mb-4 md:mb-0 shadow transform transition hover:skew-x-6">
+  <div class="flex justify-center">
+    <img src="images/icons/love.png" alt="">
+  </div>
+  <div class="space-y-4">
+    <p class="text-gray-500">5000</p>
+    <P class="text-gray-400">HAPPY CUSTOMERS</P>
+  </div>
+</div>
+
+<div class="p-8 shadow mx-4 text-center space-y-6 mb-4 md:mb-0 transform transition hover:skew-y-6">
+  <div class="flex justify-center">
+    <img src="images/icons/bike.png" alt="">
+  </div>
+  <div class="space-y-4">
+    <p class="text-gray-500">2200</p>
+    <P class="text-gray-400">TOTAL BIKE COUNT</P>
+  </div>
+</div>
+
+<div class="p-8 shadow mx-4 text-center space-y-6 transform transition hover:translate-x-6">
+  <div class="flex justify-center">
+    <img src="images/icons/flag.png" alt="">
+  </div>
+  <div class="space-y-4">
+    <p class="text-gray-500">10</p>
+    <P class="text-gray-400">CITIES SERVING NOW</P>
+  </div>
+</div>
+
+<div class="p-8 shadow mx-4 text-center space-y-6 transform transition hover:skew-y-6">
+  <div class="flex justify-center">
+    <img src="images/icons/feedback.png" alt="">
+  </div>
+  <div class="space-y-4">
+    <p class="text-gray-500">1500</p>
+    <P class="text-gray-400">PICKUP LOCATIONS</P>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- DEALER LOGIN -->
+<section>
+<div class="bg-purple-400 p-12 space-y-8 md:py-36">
+  <div class="text-white text-center space-y-4">
+    <p class="text-xl md:text-3xl">Grow your business with Swadeshi Wheels</p>
+    <p class="text-sm md:text-lg">List your bike and become a member or Swadeshi family</p>
+  </div>
+  <div class="text-center" >
+    <a class="text-center py-2 px-4 md:px-6 text-white mx-24 bg-purple-500 
+    rounded-xl cursor-pointer hover:shadow-lg hover:shadow-white" href="">
+      Dealer Login
+    </a>
+  </div>
+</div>
+</section>
+
+<!-- FAQ's -->
+<section id="FAQ">
+<div class="bg-white mt-8 space-y-6">
+  <div class="space-y-4">
+    <p class="text-center text-xl md:text-2xl">TOP FAQ's</p>
+    <p class="text-center text-md md:text-lg">Renting a bike should be easy like our FAQ's</p>
+  </div>
+  <div class="space-y-4 md:space-y-0 grid grid-cols-1 md:grid-cols-3">
+    <div class="hover:shadow-lg transition hover:translate-y-2 p-4 px-6">
+      <div class="text-left ">
+        <p class="text-lg md:text-xl">* How do i rent a bike?</p>
+        <p class="text-md md:text-lg text-justify italic">
+          Renting a bike from our website is simple! You can browse through 
+          our available bikes, select the one that suits your needs, and proceed
+           to our easy-to-use booking system. It's a step-by-step process where
+            you choose your rental dates,
+           provide necessary details, and confirm your booking with
+            a secure payment method.
+        </p>
+      </div>
+    </div>
+    <!-- 2nd FAQ -->
+    <div class="hover:shadow-lg transition hover:translate-y-2 p-4 px-6">
+      <div class="text-left ">
+        <p class="text-lg md:text-xl">* What types of bike are available?</p>
+        <p class="text-md md:text-lg text-justify italic">
+          We offer a diverse range of bikes, including mountain bikes, hybrids,
+           road bikes, and more. To ensure your preferred bike is available during
+            your rental period, we recommend booking in advance. You can also specify
+           the size or model you prefer, and we'll do our best to accommodate your 
+           request.
+        </p>
+      </div>
+    </div>
+        <!-- 3rd FAQ -->
+        <div class="hover:shadow-lg transition hover:translate-y-2 p-4 px-6">
+          <div class="text-left ">
+            <p class="text-lg md:text-xl">* what are rental duration and rates?</p>
+            <p class="text-md md:text-lg text-justify italic">
+              Our rental rates are competitive, with flexible options for hourly, daily, 
+              and weekly rentals. We believe in catering to your schedule, so you can rent a
+               bike for as short as a few hours to as long as several weeks. Feel free to
+               check our website for specific pricing details based on your preferred
+                duration.
+            </p>
+          </div>
+        </div>
+              <!-- 4rth FAQ -->
+              <div class="hover:shadow-lg transition hover:translate-y-2 p-4 px-6">
+                <div class="text-left ">
+                  <p class="text-lg md:text-xl">* what are the condition of bikes are there
+                    any measures of safety?</p>
+                  <p class="text-md md:text-lg text-justify italic">
+                    Your safety is our priority. Our bikes undergo regular maintenance 
+                    checks to ensure they're in top condition. We provide helmets with every
+                     rental, and additional safety gear is available upon request. 
+                     Rest assured, we
+                     take all necessary precautions to make your biking experience
+                      safe and enjoyable.
+                  </p>
+                </div>
+              </div>
+
+                        <!-- 5th FAQ -->
+                        <div class="hover:shadow-lg transition hover:translate-y-2 p-4 px-6">
+                          <div class="text-left ">
+                            <p class="text-lg md:text-xl">* Pick up and return ?</p>
+                            <p class="text-md md:text-lg text-justify italic">
+                              We have convenient pick-up points located in central areas for easy access. 
+                              Alternatively, we also offer delivery services to specified locations for 
+                              an additional fee. When returning the bike, simply bring it back to the 
+                              designated drop-off point at the end of your 
+                              rental period. Our team will assist you and ensure a hassle-free 
+                              return process.
+                            </p>
+                          </div>
+                        </div>    
+  </div>
+</div>
+</section>
+
+<!-- Popular Bikes for rent -->
+<section>
+  <div>
+    <div class="bg-gray-200 py-8 bg-purple-400 text-white">
+      <p class="text-center text-lg md:text-2xl">Popular Bikes for Rent</p>
+    </div>
+    <div class="p-8 text-center md:flex items-center justify-center 
+    space-x-12 bg-shadow-lg md:shadow-lg md:mx-72 md:my-4">
+      <div class="space-y-4 md:text-lg">
+        <p>Honda Active for rent</p>
+        <p>Pulsar 220 for rent</p>
+        <p>Hero Xpulse for rent</p>
+        <p>Royal Enfield Himalayan for rent</p>
+        <p>Avanger 220 cruise for rent</p>
+      </div>
+      <div class="space-y-4 mt-4 md:mt-0 md:text-lg">
+        <p>Honda Dio for rent</p>
+        <p>Pulsar NS 200 for rent</p>
+        <p>Dominar 400 for rent</p>
+        <p>Yamaha R15 for rent</p>
+        <p>Hero Super splendor for rent</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- login -->
+  <section id="login">
+    <div class="flex justify-center items-center h-screen bg-gray-100 px-2">
+      <div class="flex flex-col bg-white space-y-6 p-10 md:p-14 rounded-xl shadow-xl">
+  
+      <div>
+        <p class="text-black font-bold text-lg">Sign In</p>
+      </div>
+      <div class="flex flex-col space-y-2">
+      <!-- email section -->
+      <label class="text-gray-500 text-sm" for="email">Email Address</label>
+      <input class="border" type="email">
+      <label class="text-gray-500 text-sm" for="email">Password</label>
+      <input class="border" type="password">
+    </div>
+    <!-- button -->
+    <div class="">
+      <p class="border px-12 text-center bg-blue-700 text-white 
+      text-sm py-3 rounded-md cursor-pointer">
+        Sign In</p>
+    </div>
+    <!-- bottom part -->
+    <div class="flex justify-between md:space-x-10  cursor-pointer">
+      <p class="text-gray-500 text-sm">Forget Password?</p>
+      <p class="text-gray-500 text-sm">Not a member yet?
+        <a href="http://127.0.0.1:5500/signup.html" target="_blank"><span class="text-blue-700">Sign Up</span></p></a> 
+    </div>
+  </div>
+  <!-- image and text -->
+  <div class="relative text-sm">
+    <div>
+      <img class="w-48 h-96 rounded-xl shadow-xl" src="images/blue-image.jpg" alt="">
+    </div>
+    <div class="absolute left-10 right-0 bottom-0 top-40">
+      <p class="text-white font-bold ">Welcome Back!</p>
+    </div>
+  </div>
+  
+  
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function change(){
+    let btn = document.querySelector(".text");
+    btn.innerHTML = "Rent Motorcycles in affordable prices";
+    let subheadingS = document.querySelector(".js-btn-buy");
+    subheadingS.innerHTML = "Save upto 40% on first rental";
+  }
+</script>
+
+<script>
+  function secondChange(){
+    let btn = document.querySelector(".text");
+    btn.innerHTML = "Buy best quality gears";
+    let subheading = document.querySelector(".js-btn-buy");
+    subheading.innerHTML = "Best deals on riding gears, Hurry UP!!";
+  }
+</script>
+
+</body>
+</html>
